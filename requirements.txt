@@ -10,4 +10,5 @@ catboost
 joblib
 pickle-mixin
 openpyxl
+shap
 scipy
