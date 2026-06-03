@@ -164,7 +164,7 @@ with tab1:
         
         is_peak_season = st.selectbox(
             "Peak Season",
-            ["Yes", "No"]
+            ["Yes", "No"],help="Whether shipment occurs during a busy season"
         )
 
         # If Peak Season = Yes
@@ -193,14 +193,14 @@ with tab1:
 
         shift = st.selectbox(
             "Shift",
-            ["Morning", "Evening", "Night"]
+            ["Morning", "Evening", "Night"],help="Shift of the Employees"
         )
         
         warehouse_utilization = st.slider(
             "Warehouse Utilization Percent",
             0,
             100,
-            75
+            75,help="Current warehouse occupancy level"
         )
 
 
@@ -211,33 +211,33 @@ with tab1:
     with col2:
         handling_complexity = st.selectbox(
             "Handling Complexity",
-            ["Low", "Medium", "High"]
+            ["Low", "Medium", "High"],help="Difficulty of cargo handling"
         )
         
         dwell_time = st.number_input(
             "Dwell Time Hours",
             min_value=1,
             max_value=300,
-            value=25
+            value=25,help="Hours cargo stays in warehouse"
         )
 
         temperature_sensitive = st.selectbox(
             "Temperature Sensitive",
-            ["Yes", "No"]
+            ["Yes", "No"],help="Requires temperature-controlled storage"
         )
         
         scan_count = st.number_input(
             "Scan Count",
             min_value=1,
             max_value=15,
-            value=1
+            value=1,help="Number of barcode/RFID scans"
         )
 
         worker_experience = st.slider(
             "Worker Experience Years",
             0,
             25,
-            5
+            5,help="Experience of assigned worker"
         )
 
 
